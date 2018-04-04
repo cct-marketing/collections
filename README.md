@@ -1,6 +1,10 @@
 Collections
 ===========
 
+[![Build Status](https://travis-ci.org/cct-marketing/collections.svg?branch=master)](https://travis-ci.org/cct-marketing/collections)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/cct-marketing/collections/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/cct-marketing/collections/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/cct-marketing/collections/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/cct-marketing/collections/?branch=master)
+
 Library to handle collections in PHP.
 
 The idea of the project is centralize some already existent libraries commonly used to handle arrays in the concept of "objects".  

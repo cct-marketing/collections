@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace CCT\Component\Collections\Interactors;
 
+use CCT\Component\Collections\CollectionInterface;
+
 class ArraySorter extends AbstractInteractor
 {
     /**

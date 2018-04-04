@@ -8,7 +8,6 @@ use CCT\Component\Collections\Interactors\ArrayAggregator;
 use CCT\Component\Collections\Interactors\ArraySegregator;
 use CCT\Component\Collections\Interactors\ArraySorter;
 use CCT\Component\Collections\Interactors\ArrayInspector;
-use CCT\Component\Collections\Traits\ArrayAccessorTrait;
 use CCT\Component\Collections\Traits\InteractorProxyTrait;
 use CCT\Component\Collections\Traits\ParameterCollectionTrait;
 
