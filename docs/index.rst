@@ -31,7 +31,7 @@ The `Collection` is an immutable class implementing the `CollectionInterface`, w
 
 .. raw:: html
 
-    <div style="text-align: center;"><img src="images/collection.png" width="70%" /></div>
+    <div style="text-align: center;"><img src="images/collection.png" width="40%" class="center" align="middle" /></div>
 
 
 ParameterCollection
@@ -42,7 +42,7 @@ This class extends from the `Collection`_ class.
 
 .. raw:: html
 
-    <div style="text-align: center;"><img src="images/parameter-collection.png" width="70%" /></div>
+    <div style="text-align: center;"><img src="images/parameter-collection.png" width="50%" class="center" align="middle" /></div>
 
 
 ArrayCollection
@@ -53,4 +53,4 @@ It is the most complete collection handler, which allows you to execute some int
 
 .. raw:: html
 
-    <div style="text-align: center;"><img src="images/array-collection.png" width="70%" /></div>
+    <div style="text-align: center;"><img src="images/array-collection.png" width="50%" class="center" align="middle" /></div>
