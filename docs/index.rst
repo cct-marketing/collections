@@ -29,10 +29,9 @@ Collection
 
 The `Collection` is an immutable class implementing the `CollectionInterface`, which means you cannot change the state of the object.
 
-.. class:: center
-.. image:: images/collection.png
-    :scale: 70%
-    :align: center
+.. raw:: html
+
+    <div style="text-align: center;"><img src="images/collection.png" width="70%" /></div>
 
 
 ParameterCollection
@@ -41,10 +40,9 @@ ParameterCollection
 The `ParameterCollection` class is focused mostly to handle the collection by the keys.
 This class extends from the `Collection`_ class.
 
-.. class:: center
-.. image:: images/parameter-collection.png
-    :scale: 70%
-    :align: center
+.. raw:: html
+
+    <div style="text-align: center;"><img src="images/parameter-collection.png" width="70%" /></div>
 
 
 ArrayCollection
@@ -53,7 +51,6 @@ ArrayCollection
 The `ArrayCollection` extends from the `Collection`_ class, and also implements all the methods contained on `ParameterCollection`_ class.
 It is the most complete collection handler, which allows you to execute some internal array functions, also including actions most focused on the elements.
 
-.. class:: center
-.. image:: images/array-collection.png
-    :scale: 70%
-    :align: center
+.. raw:: html
+
+    <div style="text-align: center;"><img src="images/array-collection.png" width="70%" /></div>
