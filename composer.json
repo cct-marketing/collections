@@ -1,0 +1,32 @@
+{
+    "name": "cct-marketing/collections",
+    "description": "Collections library",
+    "type": "library",
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CCT\\Component\\Collections\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CCT\\Component\\Collections\\Tests\\": "tests/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jorge Vahldick",
+            "email": "jorge.dev@outlook.com"
+        }
+    ],
+    "config": {
+        "bin-dir": "bin"
+    },
+    "minimum-stability": "stable"
+}
