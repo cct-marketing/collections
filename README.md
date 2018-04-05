@@ -1,9 +1,12 @@
 Collections
 ===========
 
+[![Latest Stable Version](https://poser.pugx.org/cct-marketing/collections/v/stable)](https://packagist.org/packages/cct-marketing/collections)
 [![Build Status](https://travis-ci.org/cct-marketing/collections.svg?branch=master)](https://travis-ci.org/cct-marketing/collections)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/cct-marketing/collections/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/cct-marketing/collections/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/cct-marketing/collections/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/cct-marketing/collections/?branch=master)
+[![Total Downloads](https://poser.pugx.org/cct-marketing/collections/downloads)](https://packagist.org/packages/cct-marketing/collections)
+[![License](https://poser.pugx.org/cct-marketing/collections/license)](https://packagist.org/packages/cct-marketing/collections)
 
 Library to handle collections in PHP.
 
