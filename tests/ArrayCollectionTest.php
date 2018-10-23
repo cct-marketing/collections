@@ -97,6 +97,14 @@ class ArrayCollectionTest extends AbstractCollectionTest
         self::assertFalse($removed);
     }
 
+    public function testOverrideElements(): void
+    {
+        $collection = $this->createCollection([]);
+        $collection->override(['my-element']);
+
+        self::assertCount(1, $collection);
+    }
+
     /**
      * @expectedException \BadMethodCallException
      */

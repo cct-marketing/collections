@@ -33,4 +33,13 @@ interface ArrayCollectionInterface extends \ArrayAccess
      * @return void
      */
     public function addElement($element): void;
+
+    /**
+     * Overrides the elements of the array.
+     *
+     * @param array $elements
+     *
+     * @return ArrayCollectionInterface
+     */
+    public function override(array $elements): self;
 }

@@ -54,15 +54,18 @@ class CollectionProxy
      */
     public function __call($method, $parameters)
     {
-        $collectionClass = get_class($this->collection);
         $result = $this->proxy->{$method}(...$parameters);
 
         if (is_array($result)) {
-            return new $collectionClass($result);
+            $this->collection->override($result);
+
+            return $this->collection;
         }
 
         if ($result instanceof InteractorInterface || null === $result) {
-            return new $collectionClass($this->proxy->all());
+            $this->collection->override($this->proxy->all());
+
+            return $this->collection;
         }
 
         return $result;

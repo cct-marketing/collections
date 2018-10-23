@@ -111,4 +111,14 @@ class ArrayCollection extends Collection implements ParameterCollectionInterface
     {
         return in_array($element, $this->elements, true);
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function override(array $elements): ArrayCollectionInterface
+    {
+        $this->elements = $elements;
+
+        return $this;
+    }
 }
