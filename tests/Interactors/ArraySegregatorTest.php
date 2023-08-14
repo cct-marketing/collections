@@ -31,7 +31,9 @@ class ArraySegregatorTest extends TestCase
         $collection = $segregator->all();
 
         self::assertCount(count($elements), $collection);
-        self::assertArraySubset($elements, $collection, true);
+        foreach ($elements as $key => $value) {
+            $this->assertSame($value, $collection[$key]);
+        }
     }
 
     /**
@@ -50,7 +52,9 @@ class ArraySegregatorTest extends TestCase
         $collection = $segregator->all();
 
         self::assertCount(count($elements), $collection);
-        self::assertArraySubset($elements, $collection, true);
+        foreach ($elements as $key => $value) {
+            $this->assertSame($value, $collection[$key]);
+        }
     }
 
     /**
@@ -75,7 +79,9 @@ class ArraySegregatorTest extends TestCase
         $elements = array_map($callable, $elements);
 
         self::assertCount(count($elements), $collection);
-        self::assertArraySubset($elements, $collection, true);
+        foreach ($elements as $key => $value) {
+            $this->assertSame($value, $collection[$key]);
+        }
     }
 
     /**
@@ -98,7 +104,9 @@ class ArraySegregatorTest extends TestCase
         self::assertArrayHasKey('key-1', $elements);
         self::assertArrayHasKey('key-1', $collection);
         self::assertCount(count($elements), $collection);
-        self::assertArraySubset($elements, $collection, true);
+        foreach ($elements as $key => $value) {
+            $this->assertSame($value, $collection[$key]);
+        }
     }
 
     /**

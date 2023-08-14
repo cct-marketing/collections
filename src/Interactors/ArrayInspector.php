@@ -15,7 +15,7 @@ class ArrayInspector extends AbstractInteractor
      *
      * @return int|string|bool The key/index of the element or FALSE if the element was not found.
      */
-    public function indexOf($element)
+    public function indexOf(mixed $element): bool|int|string
     {
         return array_search($element, $this->elements, true);
     }

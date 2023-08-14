@@ -14,10 +14,8 @@ class ArraySorter extends AbstractInteractor
      * @param int  $order           Possible values: SORT_ASC or SORT_DESC
      * @param int  $strategy        @see http://php.net/manual/en/function.sort.php#refsect1-function.sort-parameters
      * @param bool $preserveKeys    Preserve or not the keys
-     *
-     * @return array|CollectionInterface
      */
-    public function sort(int $order = SORT_ASC, int $strategy = SORT_REGULAR, $preserveKeys = false): array
+    public function sort(int $order = SORT_ASC, int $strategy = SORT_REGULAR, bool $preserveKeys = false): array
     {
         $this->applySorting($order, $strategy, $preserveKeys);
 
@@ -29,8 +27,6 @@ class ArraySorter extends AbstractInteractor
      *
      * @param int $order        Possible values: SORT_ASC or SORT_DESC
      * @param int $strategy     @see http://php.net/manual/en/function.sort.php#refsect1-function.sort-parameters
-     *
-     * @return array|CollectionInterface
      */
     public function sortByKeys(int $order = SORT_ASC, int $strategy = SORT_REGULAR): array
     {
@@ -41,8 +37,6 @@ class ArraySorter extends AbstractInteractor
 
     /**
      * Shuffle the array and return the result.
-     *
-     * @return array|CollectionInterface
      */
     public function shuffle(): array
     {

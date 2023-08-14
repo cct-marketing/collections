@@ -38,7 +38,8 @@ class ArrayAggregatorTest extends TestCase
 
         self::assertCount(count($elements['berries']), $aggregator->all()['berries']);
         self::assertCount(count($elements['citrus']), $aggregator->all()['citrus']);
-        self::assertArraySubset($elements, $aggregator->all(), true);
+        self::assertEquals($elements['berries'], $aggregator->all()['berries']);
+        self::assertEquals($elements['citrus'], $aggregator->all()['citrus']);
     }
 
     /**
@@ -59,7 +60,8 @@ class ArrayAggregatorTest extends TestCase
         $elements = array_merge($elements, $mergeWith);
 
         self::assertCount(count($elements), $aggregator->all());
-        self::assertArraySubset($elements, $aggregator->all(), true);
+        self::assertEquals($elements['citrus'], $aggregator->all()['citrus']);
+        self::assertEquals($elements['berries'], $aggregator->all()['berries']);
     }
 
     /**
@@ -81,7 +83,8 @@ class ArrayAggregatorTest extends TestCase
 
         self::assertCount(count($elements['berries']), $aggregator->all()['berries']);
         self::assertCount(count($elements['citrus']), $aggregator->all()['citrus']);
-        self::assertArraySubset($elements, $aggregator->all(), true);
+        self::assertEquals($elements['citrus'], $aggregator->all()['citrus']);
+        self::assertEquals($elements['berries'], $aggregator->all()['berries']);
     }
 
 
@@ -103,7 +106,8 @@ class ArrayAggregatorTest extends TestCase
         $elements = array_merge_recursive($elements, $replacements);
 
         self::assertCount(count($elements), $aggregator->all());
-        self::assertArraySubset($elements, $aggregator->all(), true);
+        self::assertEquals($elements['citrus'], $aggregator->all()['citrus']);
+        self::assertEquals($elements['berries'], $aggregator->all()['berries']);
     }
 
     /**
@@ -122,7 +126,9 @@ class ArrayAggregatorTest extends TestCase
         array_push($elements, 'element-01', 'element-02');
 
         self::assertCount(count($elements), $aggregator->all());
-        self::assertArraySubset($elements, $aggregator->all(), true);
+        foreach ($elements as $key => $value) {
+            $this->assertSame($value, $aggregator->all()[$key]);
+        }
     }
 
     /**
@@ -138,7 +144,9 @@ class ArrayAggregatorTest extends TestCase
         array_unshift($elements, 'element');
 
         self::assertCount(count($elements), $aggregator->all());
-        self::assertArraySubset($elements, $aggregator->all(), true);
+        foreach ($elements as $key => $value) {
+            $this->assertSame($value, $aggregator->all()[$key]);
+        }
     }
 
     public function getElements(): array

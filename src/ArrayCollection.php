@@ -40,7 +40,7 @@ class ArrayCollection extends Collection implements ParameterCollectionInterface
      *
      * {@inheritdoc}
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return $this->has($offset);
     }
@@ -60,7 +60,7 @@ class ArrayCollection extends Collection implements ParameterCollectionInterface
      *
      * {@inheritdoc}
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (!isset($offset)) {
             $this->addElement($value);
@@ -75,7 +75,7 @@ class ArrayCollection extends Collection implements ParameterCollectionInterface
      *
      * {@inheritdoc}
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         $this->remove($offset);
     }
@@ -83,7 +83,7 @@ class ArrayCollection extends Collection implements ParameterCollectionInterface
     /**
      * {@inheritdoc}
      */
-    public function addElement($element): void
+    public function addElement(mixed $element): void
     {
         $this->elements[] = $element;
     }
@@ -91,7 +91,7 @@ class ArrayCollection extends Collection implements ParameterCollectionInterface
     /**
      * {@inheritdoc}
      */
-    public function removeElement($element): bool
+    public function removeElement(mixed $element): bool
     {
         $key = $this->inspector()->indexOf($element);
 
@@ -107,7 +107,7 @@ class ArrayCollection extends Collection implements ParameterCollectionInterface
     /**
      * {@inheritdoc}
      */
-    public function contains($element): bool
+    public function contains(mixed $element): bool
     {
         return in_array($element, $this->elements, true);
     }

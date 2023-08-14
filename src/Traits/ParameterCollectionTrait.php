@@ -9,12 +9,12 @@ trait ParameterCollectionTrait
     /**
      * @var array
      */
-    protected $elements;
+    protected array $elements;
 
     /**
      * {@inheritdoc}
      */
-    public function set($key, $value): void
+    public function set(int|string $key, mixed $value): void
     {
         $this->elements[$key] = $value;
     }
@@ -22,7 +22,7 @@ trait ParameterCollectionTrait
     /**
      * {@inheritdoc}
      */
-    public function get($key, $default = null)
+    public function get(int|string $key, mixed $default = null): mixed
     {
         return $this->has($key)
             ? $this->elements[$key]
@@ -49,7 +49,7 @@ trait ParameterCollectionTrait
     /**
      * {@inheritdoc}
      */
-    public function remove($key)
+    public function remove(int|string $key): mixed
     {
         if (false === $this->has($key)) {
             return null;
@@ -88,7 +88,7 @@ trait ParameterCollectionTrait
     /**
      * {@inheritdoc}
      */
-    public function has($key) : bool
+    public function has(int|string $key) : bool
     {
         return isset($this->elements[$key]) || array_key_exists($key, $this->elements);
     }

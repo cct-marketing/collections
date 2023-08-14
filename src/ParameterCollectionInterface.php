@@ -9,22 +9,22 @@ interface ParameterCollectionInterface
     /**
      * Sets an element in the collection at the specified key/index.
      *
-     * @param string|int $key   The key/index of the element to set.
+     * @param int|string $key   The key/index of the element to set.
      * @param mixed      $value The element to set.
      *
      * @return void
      */
-    public function set($key, $value): void;
+    public function set(int|string $key, mixed $value): void;
 
     /**
      * Gets the element at the specified key/index.
      *
-     * @param string|int $key The key/index of the element to retrieve.
-     * @param mixed $default The default value if the parameter key does not exist
+     * @param int|string $key The key/index of the element to retrieve.
+     * @param mixed|null $default The default value if the parameter key does not exist
      *
      * @return mixed
      */
-    public function get($key, $default = null);
+    public function get(int|string $key, mixed $default = null): mixed;
 
     /**
      * Adds the elements to the collection using array_replace.
@@ -38,11 +38,11 @@ interface ParameterCollectionInterface
     /**
      * Checks if the array has the specific key.
      *
-     * @param mixed $key
+     * @param int|string $key
      *
      * @return bool
      */
-    public function has($key): bool;
+    public function has(int|string $key): bool;
 
     /**
      * Clears the collection, removing all elements.
@@ -54,11 +54,11 @@ interface ParameterCollectionInterface
     /**
      * Removes the element at the specified index from the collection.
      *
-     * @param string|int $key The kex/index of the element to remove.
+     * @param int|string $key The kex/index of the element to remove.
      *
      * @return mixed The removed element or NULL, if the collection did not contain the element.
      */
-    public function remove($key);
+    public function remove(int|string $key): mixed;
 
     /**
      * Replaces the current parameters by a new set.

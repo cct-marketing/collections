@@ -9,7 +9,7 @@ abstract class AbstractInteractor implements InteractorInterface
     /**
      * @var array
      */
-    protected $elements;
+    protected array $elements;
 
     /**
      * AbstractInteractor constructor.

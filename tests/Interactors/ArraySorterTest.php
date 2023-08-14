@@ -14,7 +14,7 @@ class ArraySorterTest extends TestCase
      */
     protected $elements;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->elements = [
             'element-01' => 'element-01',
@@ -29,12 +29,12 @@ class ArraySorterTest extends TestCase
         ];
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         $this->elements = [];
     }
 
-    public function testShuffledElements()
+    public function testShuffledElements(): void
     {
         $collection = $this->getArrayCollectionInstance();
         $shuffledCollection = $collection->sorter()->shuffle();
@@ -113,19 +113,15 @@ class ArraySorterTest extends TestCase
         $this->assertEquals('element-75', $collection->first());
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testSortByInvalidOrder()
     {
+        $this->expectException(\InvalidArgumentException::class);
         $this->getArrayCollectionInstance()->sorter()->sort(5000);
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testSortByKeysWithInvalidOrder()
     {
+        $this->expectException(\InvalidArgumentException::class);
         $this->getArrayCollectionInstance()->sorter()->sortByKeys(5000);
     }
 

@@ -12,8 +12,6 @@ class ArrayAggregator extends AbstractInteractor
      * Merge one or more arrays by a new set.
      *
      * @param array $elements One or more arrays
-     *
-     * @return array|CollectionInterface
      */
     public function merge(...$elements): array
     {
@@ -26,8 +24,6 @@ class ArrayAggregator extends AbstractInteractor
      * Merge one or more arrays recursively by a new set.
      *
      * @param array $elements One or more arrays
-     *
-     * @return array|CollectionInterface
      */
     public function mergeRecursive(...$elements): array
     {
@@ -40,8 +36,6 @@ class ArrayAggregator extends AbstractInteractor
      * Replace one or more arrays recursively by a new set.
      *
      * @param array $elements One or more arrays
-     *
-     * @return array|CollectionInterface
      */
     public function replace(...$elements): array
     {
@@ -54,8 +48,6 @@ class ArrayAggregator extends AbstractInteractor
      * Replace recursively one or more arrays recursively by a new set.
      *
      * @param array $elements One or more arrays
-     *
-     * @return array|CollectionInterface
      */
     public function replaceRecursive(...$elements): array
     {

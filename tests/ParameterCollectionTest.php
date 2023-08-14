@@ -58,7 +58,9 @@ class ParameterCollectionTest extends AbstractCollectionTest
         $keys = array_keys($elements);
 
         self::assertCount(count($keys), $collectionKeys);
-        self::assertArraySubset($keys, $collectionKeys);
+        foreach ($keys as $key => $value) {
+            $this->assertSame($value, $collectionKeys[$key]);
+        }
     }
 
     /**
@@ -73,7 +75,9 @@ class ParameterCollectionTest extends AbstractCollectionTest
         $values = array_values($elements);
 
         self::assertCount(count($values), $collectionValues);
-        self::assertArraySubset($values, $collectionValues);
+        foreach ($values as $key => $value) {
+            $this->assertSame($value, $collectionValues[$key]);
+        }
     }
 
     /**
@@ -101,7 +105,9 @@ class ParameterCollectionTest extends AbstractCollectionTest
         $collection->replace($newElements);
 
         self::assertCount(count($newElements), $collection);
-        self::assertArraySubset($newElements, $collection->all());
+        foreach ($newElements as $key => $value) {
+            $this->assertSame($value, $collection->all()[$key]);
+        }
     }
 
     /**
@@ -119,7 +125,9 @@ class ParameterCollectionTest extends AbstractCollectionTest
         $elements = array_replace($elements, $newElements);
 
         self::assertCount(count($elements), $collection);
-        self::assertArraySubset($elements, $collection->all());
+        foreach ($elements as $key => $value) {
+            $this->assertSame($value, $collection->all()[$key]);
+        }
     }
 
     /**

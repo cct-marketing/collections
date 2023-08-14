@@ -11,35 +11,35 @@ interface CollectionInterface extends \Countable, \IteratorAggregate
      *
      * @return mixed
      */
-    public function first();
+    public function first(): mixed;
 
     /**
      * Sets the internal iterator to the last element in the collection and returns this element.
      *
      * @return mixed
      */
-    public function last();
+    public function last(): mixed;
 
     /**
      * Gets the key/index of the element at the current iterator position.
      *
      * @return int|string
      */
-    public function key();
+    public function key(): int|string;
 
     /**
      * Gets the element of the collection at the current iterator position.
      *
      * @return mixed
      */
-    public function current();
+    public function current(): mixed;
 
     /**
      * Moves the internal iterator position to the next element and returns this element.
      *
      * @return mixed
      */
-    public function next();
+    public function next(): mixed;
 
     /**
      * Checks whether the collection is empty (contains no elements).

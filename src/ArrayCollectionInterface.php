@@ -14,7 +14,7 @@ interface ArrayCollectionInterface extends \ArrayAccess
      *
      * @return bool TRUE if the collection contains the element, FALSE otherwise.
      */
-    public function contains($element): bool;
+    public function contains(mixed $element): bool;
 
     /**
      * Removes the specified element from the collection, if it is found.
@@ -23,7 +23,7 @@ interface ArrayCollectionInterface extends \ArrayAccess
      *
      * @return bool TRUE if this collection contained the specified element, FALSE otherwise.
      */
-    public function removeElement($element);
+    public function removeElement(mixed $element): bool;
 
     /**
      * Adds a new element in the end of collection.
@@ -32,7 +32,7 @@ interface ArrayCollectionInterface extends \ArrayAccess
      *
      * @return void
      */
-    public function addElement($element): void;
+    public function addElement(mixed $element): void;
 
     /**
      * Overrides the elements of the array.

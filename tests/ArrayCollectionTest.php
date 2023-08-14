@@ -105,11 +105,9 @@ class ArrayCollectionTest extends AbstractCollectionTest
         self::assertCount(1, $collection);
     }
 
-    /**
-     * @expectedException \BadMethodCallException
-     */
     public function testInvalidProxyCall()
     {
+        $this->expectException(\BadMethodCallException::class);
         $collection = $this->createCollection([]);
         $collection->invalidMethod();
     }

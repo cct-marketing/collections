@@ -8,10 +8,8 @@ class Collection implements CollectionInterface
 {
     /**
      * An array containing the entries of this collection.
-     *
-     * @var array
      */
-    protected $elements;
+    protected array $elements;
 
     /**
      * Initializes a new ArrayCollection.
@@ -42,7 +40,7 @@ class Collection implements CollectionInterface
     /**
      * {@inheritdoc}
      */
-    public function count()
+    public function count(): int
     {
         return count($this->elements);
     }
@@ -50,7 +48,7 @@ class Collection implements CollectionInterface
     /**
      * {@inheritdoc}
      */
-    public function first()
+    public function first(): mixed
     {
         return reset($this->elements);
     }
@@ -58,7 +56,7 @@ class Collection implements CollectionInterface
     /**
      * {@inheritdoc}
      */
-    public function last()
+    public function last(): mixed
     {
         return end($this->elements);
     }
@@ -66,7 +64,7 @@ class Collection implements CollectionInterface
     /**
      * {@inheritdoc}
      */
-    public function key()
+    public function key(): int|string
     {
         return key($this->elements);
     }
@@ -74,7 +72,7 @@ class Collection implements CollectionInterface
     /**
      * {@inheritdoc}
      */
-    public function next()
+    public function next(): mixed
     {
         return next($this->elements);
     }
@@ -82,7 +80,7 @@ class Collection implements CollectionInterface
     /**
      * {@inheritdoc}
      */
-    public function current()
+    public function current(): mixed
     {
         return current($this->elements);
     }
@@ -90,7 +88,7 @@ class Collection implements CollectionInterface
     /**
      * {@inheritdoc}
      */
-    public function getIterator()
+    public function getIterator(): \ArrayIterator
     {
         return new \ArrayIterator($this->elements);
     }

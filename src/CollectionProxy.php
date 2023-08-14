@@ -15,17 +15,17 @@ class CollectionProxy
     /**
      * @var CollectionInterface
      */
-    protected $collection;
+    protected CollectionInterface $collection;
 
     /**
      * @var object
      */
-    protected $proxy;
+    protected mixed $proxy;
 
     /**
      * @var array
      */
-    public static $proxies = [
+    public static array $proxies = [
         'sorter' => ArraySorter::class,
         'inspector' => ArrayInspector::class,
         'aggregator' => ArrayAggregator::class,
@@ -48,11 +48,11 @@ class CollectionProxy
      * Proxy a method call onto the specified Interactor.
      *
      * @param string $method
-     * @param array $parameters
+     * @param array  $parameters
      *
      * @return mixed
      */
-    public function __call($method, $parameters)
+    public function __call(string $method, array $parameters)
     {
         $result = $this->proxy->{$method}(...$parameters);
 
