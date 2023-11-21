@@ -50,7 +50,7 @@ class ArrayCollection extends Collection implements ParameterCollectionInterface
      *
      * {@inheritdoc}
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return $this->get($offset);
     }
